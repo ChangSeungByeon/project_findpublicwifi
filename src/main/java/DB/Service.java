@@ -148,29 +148,29 @@ public class Service {
             preparedStatement.setString(1, mw.getID_WIFI());
             preparedStatement.setString(2, mw.getGU());
             preparedStatement.setString(3, mw.getNAME());
-            preparedStatement.setString(4, mw.getADDRESS_STREET()
-//            preparedStatement.setString(5, mw.);
-//            preparedStatement.setString(6, mw.);
-//            preparedStatement.setString(7, mw.);
-//            preparedStatement.setString(8, mw.);
-//            preparedStatement.setString(9, mw.);
-//            preparedStatement.setString(10, mw.);
-//            preparedStatement.setString(11, mw.);
-//            preparedStatement.setString(12, mw.);
-//            preparedStatement.setString(13, mw.);
-//            preparedStatement.setString(14, mw.);
-//            preparedStatement.setString(15, mw.);
-//            preparedStatement.setString(16, mw.);
-
-       
+            preparedStatement.setString(4, mw.getADDRESS_STREET());
+            preparedStatement.setString(5, mw.getADDRESS_SPECIFIC());
+            preparedStatement.setString(6, mw.getFLOOR());
+            preparedStatement.setString(7, mw.getINSTALL_TYPE());
+            preparedStatement.setString(8, mw.getINSTALL_TEAM());
+            preparedStatement.setString(9, mw.getSERVICE_TYPE());
+            preparedStatement.setString(10, mw.getMANG());
+            preparedStatement.setString(11, mw.getREGST_YEAR());
+            preparedStatement.setString(12, mw.getIN_OUT());
+            preparedStatement.setString(13, mw.getCIRCUM());
+            preparedStatement.setFloat(14, mw.getY());
+            preparedStatement.setFloat(15, mw.getX());
+            preparedStatement.setString(16, mw.getREGST_DATE());
 
 
             int affected= preparedStatement.executeUpdate();
 
             if(affected > 0){
                 System.out.println("저장 성공");
+                return true;
             }else{
                 System.out.println("저장 실패");
+                return false;
             }
 
 
@@ -208,7 +208,6 @@ public class Service {
         }
         
         
-        return memberList;
     
 		
 	}

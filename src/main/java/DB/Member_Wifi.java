@@ -133,18 +133,21 @@ public class Member_Wifi {
 		REGST_DATE = rEGST_DATE;
 	}
 	
-	public boolean dbInsert_Itself() {
+	public void dbInsert_Itself(String json) {
 		
 		Gson gson = new Gson();
 		 
-        String json = ;
         Member_Wifi mw = gson.fromJson(json, Member_Wifi.class);
+        
+        // - > 이거는 dbInsert_WIFILIST_API() 에서 진행해야 한다. 
         
         
 //        System.out.println(animal);
 // 
 //        String reJson = gson.toJson(animal);
 //        System.out.println(reJson);
+        
+        
 		
 		
 		
