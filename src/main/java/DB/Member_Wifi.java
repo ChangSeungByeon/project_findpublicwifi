@@ -1,5 +1,4 @@
 package DB;
-import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
 public class Member_Wifi {
@@ -30,9 +29,9 @@ public class Member_Wifi {
 	@SerializedName("X_SWIFI_REMARS3")
 	private String CIRCUM;
 	@SerializedName("LAT")
-	private float Y;
+	private double X;
 	@SerializedName("LNT")
-	private float X;
+	private double Y;
 	@SerializedName("WORK_DTTM")
 	private String REGST_DATE;
 	
@@ -114,16 +113,16 @@ public class Member_Wifi {
 	public void setCIRCUM(String cIRCUM) {
 		CIRCUM = cIRCUM;
 	}
-	public float getY() {
+	public double getY() {
 		return Y;
 	}
-	public void setY(float y) {
+	public void setY(double y) {
 		Y = y;
 	}
-	public float getX() {
+	public double getX() {
 		return X;
 	}
-	public void setX(float x) {
+	public void setX(double x) {
 		X = x;
 	}
 	public String getREGST_DATE() {
@@ -131,30 +130,6 @@ public class Member_Wifi {
 	}
 	public void setREGST_DATE(String rEGST_DATE) {
 		REGST_DATE = rEGST_DATE;
-	}
-	
-	public void dbInsert_Itself(String json) {
-		
-		Gson gson = new Gson();
-		 
-        Member_Wifi mw = gson.fromJson(json, Member_Wifi.class);
-        
-        // - > 이거는 dbInsert_WIFILIST_API() 에서 진행해야 한다. 
-        
-        
-//        System.out.println(animal);
-// 
-//        String reJson = gson.toJson(animal);
-//        System.out.println(reJson);
-        
-        
-		
-		
-		
-		
-		
-		
-		
 	}
 
 	

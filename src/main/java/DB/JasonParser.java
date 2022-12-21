@@ -30,7 +30,7 @@ public class JasonParser {
 	    
 	    
 	    System.out.println("name=" + name);
-	    System.out.println(arr.get(0));
+	    System.out.println(arr.get(0).toString());
 	    System.out.println(((JsonElement)arr.get(0)).getAsJsonObject().get("X_SWIFI_WRDOFC"));
 //	    System.out.println("department=" + department);
 //	    System.out.println("number=" + number);
