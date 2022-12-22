@@ -126,6 +126,10 @@ public class Service {
 		return dbDelete_all("DISTANCE");
     }
 	
+	public Boolean dbDelete_MEMBER() {
+		return dbDelete_all("MEMBER");
+	}
+	
 	public Boolean dbDelete_DISTANCE(int ID_USER) {
 		
 
@@ -399,7 +403,7 @@ public class Service {
 	
 	public int dbInsert_WIFILIST_API() {
 		
-		if(!(dbDelete_WIFILIST() & dbDelete_DISTANCE())) {
+		if(!(dbDelete_WIFILIST() & dbDelete_DISTANCE() & dbDelete_MEMBER())) {
 			
 			return -1;
 			

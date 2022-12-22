@@ -10,8 +10,15 @@
 <title>Insert title here</title>
 <style>
 
+	button{
+	
+	text-align: center;
+	
+	}
+
 	table, td, th {
 	  border: 1px solid;
+	  text-align: center;
 	}
 	
 	table {
